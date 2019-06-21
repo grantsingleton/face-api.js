@@ -127,10 +127,10 @@ function updateMood(mood)
 async function run() 
 {
         
-    const MODEL_URL = '/weights';
+    const MODEL_URL = './weights';
         
       // change to tiny face detector for faster rendering
-      await changeFaceDetector(TINY_FACE_DETECTOR);
+      //await changeFaceDetector(TINY_FACE_DETECTOR);
         
       // load models
       await faceapi.loadFaceRecognitionModel(MODEL_URL);
