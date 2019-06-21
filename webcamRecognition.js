@@ -135,7 +135,7 @@ async function run()
       // load models
       await faceapi.loadFaceRecognitionModel(MODEL_URL);
       await faceapi.loadFaceLandmarkModel(MODEL_URL);
-      //await faceapi.loadTinyFaceDetectorModel(MODEL_URL);
+      await faceapi.loadTinyFaceDetectorModel(MODEL_URL);
       await faceapi.loadFaceExpressionModel(MODEL_URL);
       await faceapi.loadSsdMobilenetv1Model(MODEL_URL)
 
