@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="Login.css">
+<style type="text/css">
+	
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}	
+a:link, a:visited {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-right: 20px;
+	padding-left: 20px;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: purple;
+}
+
+</style>
+<meta charset="utf-8">
+<title>Login</title>    
+  <!-- **FACE RECOGNITION RESOURCES BEGIN HERE** -->    
+  <script src="http://127.0.0.1:8887/dist/face-api.js"></script>
+  <script src="http://127.0.0.1:8887/examples/examples-browser/public/js/commons.js"></script>
+  <script src="http://127.0.0.1:8887/examples/examples-browser/public/js/drawing.js"></script>
+  <script src="http://127.0.0.1:8887/examples/examples-browser/public/js/faceDetectionControls.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+ <!-- **FACE RECOGNITION RESOURCES END HERE** -->
+
+</head>
+
+<body scroll="no" style="overflow: hidden">
+<div id="center">	<img src="Back_log.png" alt="">
+</div>
+	
+<ul class = "topleft">
+	<li><a href="Scope.html" ><img alt="logo" src="Logo-3.png" style= "vertical-align: middle"><span style="vertical-align: middle">Scope</span></a></li>
+</ul>
+<ul class = "topright">
+	<li><a href="Pricing.html">Pricing</a></li>
+    <li><a href="Contact.html">Support</a></li>
+    <li><a href="Scope.html">Logout</a></li>
+</ul>
+	
+<div id = "video">
+    <div style="position: relative" class="margin">
+      <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted></video>
+      <canvas id="overlay" />
+  </div>
+	</div>
+	
+<div id = "text">
+	<h1> Customer Info </h1>
+	<p id="cust_name"> Customer Name: </p>
+	<p id="cust_id"> Customer ID: </p>
+	<p id="status"> Status: </p>
+    <p id="mood"> Mood: </p>
+	<br>
+    <button id = "visible" onclick="window.open('http://localhost:8080').close()">Call the Police</button>
+</div>
+
+<!-- **FACE RECOGNITION SCRIPT** -->
+<script src="http://127.0.0.1:8887/resources/webcamRecognition.js"></script>
+	
+</body>
+</html>
