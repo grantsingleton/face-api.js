@@ -163,29 +163,13 @@ async function buildReferenceData()
             console.log("img detect failed");
             return;
         }
-        
-        
-        // Add Krista
-        const krista_img = await faceapi.fetchImage('./images/Krista_1.jpg')
-        const results2 = await faceapi.detectSingleFace(krista_img, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-        
-        if (!results2) 
-        {
-            console.log("img detect failed");
-            return;
-        }
-        
     
         // Associate names with faces
         const labeledDescriptors = [
                 new faceapi.LabeledFaceDescriptors(
                     "Grant Singleton",
                     [results.descriptor]
-                    ),
-                new faceapi.LabeledFaceDescriptors(
-                     "Krista Singleton",
-                     [results2.descriptor]
-                     )
+                    )
             ]
         
         // load the faces and associated names into faceMatcher
