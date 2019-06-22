@@ -163,12 +163,26 @@ async function buildReferenceData()
             console.log("img detect failed");
             return;
         }
+        
+        // Add Mark
+        const mark_img = await faceapi.fetchImage('./images/Mark.jpg')
+        const results1 = await faceapi.detectSingleFace(mark_img, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
+        
+        if (!results1) 
+        {
+            console.log("img detect failed");
+            return;
+        }
     
         // Associate names with faces
         const labeledDescriptors = [
                 new faceapi.LabeledFaceDescriptors(
                     "Grant Singleton",
                     [results.descriptor]
+                    ),
+                new faceapi.LabeledFaceDescriptors(
+                    "Luke Skywalker",
+                    [results1.descriptor]
                     )
             ]
         
